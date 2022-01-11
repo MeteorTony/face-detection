@@ -1,10 +1,11 @@
 const video = document.getElementById("video");
+const href = "https://meteortony.github.io/face-detection/";
 
 Promise.all([                                               // 4 types of library
-  faceapi.nets.tinyFaceDetector.loadFromUri("/models"),
-  faceapi.nets.faceLandmark68Net.loadFromUri("/models"),
-  faceapi.nets.faceRecognitionNet.loadFromUri("/models"),
-  faceapi.nets.faceExpressionNet.loadFromUri("/models"),
+  faceapi.nets.tinyFaceDetector.loadFromUri(href + "/models"),
+  faceapi.nets.faceLandmark68Net.loadFromUri(href + "/models"),
+  faceapi.nets.faceRecognitionNet.loadFromUri(href + "/models"),
+  faceapi.nets.faceExpressionNet.loadFromUri(href + "/models"),
 ]).then(startVideo);
 
 function startVideo() {
